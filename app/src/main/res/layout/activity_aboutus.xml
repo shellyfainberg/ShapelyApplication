@@ -10,32 +10,64 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/ic_backround">
-        <TextView
+
+        <LinearLayout
+            android:id="@+id/aboutus_LAY2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/aboutUsText"
-            android:textColor="@color/colorAccent"
-            android:textSize="30dp"
-            android:layout_marginTop="50dp">
-
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp">
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:text="@string/Hello"
+            android:textColor="@color/textcolor"
+            android:textSize="35dp"
+            >
         </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/aboutus_LAY3"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
 
+            android:layout_below="@+id/aboutus_LAY2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="@string/aboutUsText"
+                android:textColor="@color/textcolor"
+                android:textSize="30dp"
+                >
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/aboutus_LAY1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/aboutus_LAY3">
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_logo1">
+            </ImageView>
+        </LinearLayout>
 
-
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/aboutUs_BTN_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/back"
-            android:textColor="@color/colorAccent"
-            app:cornerRadius="20dp"
-            android:layout_marginTop="530dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="270dp">
-
-        </com.google.android.material.button.MaterialButton>
-
-
+            android:layout_below="@id/aboutus_LAY1"
+            android:background="@drawable/ic_clear"
+            android:text="back"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textcolor"
+            android:textSize="20sp">
+        </Button>
     </RelativeLayout>
 
 

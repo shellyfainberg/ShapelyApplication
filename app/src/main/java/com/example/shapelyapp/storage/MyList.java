@@ -31,7 +31,6 @@ public class MyList {
     private String fragmentName ="";
     private CallBackActivity callBack_activityList;
 
-
     public MyList() {
     }
 
@@ -69,12 +68,8 @@ public class MyList {
                 refreshList(tasks);
                 Log.d("pttt", "C - Number of tasks: " + tasks.size());
             }
-
             @Override
-            public void error() {
-
-            }
-
+            public void error() { }
         }, context);
 
         Log.d("pttt", "C - Number of tasks: " + tasks.size());
@@ -87,68 +82,9 @@ public class MyList {
         LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter_taskModel);
-        adapter_taskModel.SetOnItemClickListener(new AdapterTaskModel.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position, Event task) {
-                String l1 = "";
-                String l2 = "";
-                if(task.getLocation().get(0) !=0 && task.getLocation().get(1) != 0){
-                    l1 = "" + task.getLocation().get(0);
-                    l2 = "" + task.getLocation().get(1);
-                }
-                String date = task.getDate();
-                if(!date.isEmpty()) {
-                    String[] dateArr = date.split("/");
-                    String year = "", month = "", day = "";
-                    year = dateArr[0];
-                    month = dateArr[1];
-                    day = dateArr[2];
-                    date = month + "/" + day + "/" + year;
-                }
-                new AlertDialog.Builder(context)
-                        .setTitle("Task")
-                        .setMessage("Date: " + date + "\nTime: " + task.getTime() + "\nTask: " + task.getDescription()
-                                + "\nLatitude: " + l1 + "\nLongitude:" + l2)
-
-                        // Specifying a listener allows you to take an action before dismissing the dialog.
-                        // The dialog is automatically dismissed when a dialog button is clicked.
-                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Continue with delete operation
-                            }
-                        })
-                        // A null listener allows the button to dismiss the dialog and take no further action.
-                        .setIcon(R.drawable.ic_ex1)
-                        .show();
-
-            }
-
-            @Override
-            public void onItemLongClick(View view, int position, Event task) {
-
-                mposition = position;
-                if(fragmentName.equals("com.example.todolist.ToDoListFragment"))
-                    changeToDone();
-
-            }
-        });
-
-    }
-
-    private void changeToDone(){
-        Toast.makeText(context, "done", Toast.LENGTH_SHORT).show();
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef;
-        String id  = tasks.get(mposition).getId();
-        String android_id = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-        myRef = database.getReference("message");
-        myRef.child("Users").child(android_id).child(id).child("isDone").setValue(true);
-        adapter_taskModel.removeAt(mposition);
-        EventListFragment.updateList();
     }
 
     public  void removall(){
         recyclerView.removeAllViews();
     }
-
 }

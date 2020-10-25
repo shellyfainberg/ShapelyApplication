@@ -1,5 +1,6 @@
 package com.example.shapelyapp;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,9 +14,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StepCounterActivity extends AppCompatActivity implements SensorEventListener {
-    private Button heartbeat_BTN_CounterReset;
-    private TextView heartbeat_TXT_showsteps ;
-    private TextView heartbeat_TXT_counter;
+    private Button stepCounter_BTN_CounterReset;
+    private TextView stepCounter_TXT_showsteps ;
+    private TextView stepCounter_TXT_counter;
+    private Button stepCouner_BTN_back;
     private SensorManager sensorManager;
     private Sensor stepSensor;
     private boolean isCounter;
@@ -35,27 +37,34 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
             isCounter=true;
         }
         else{
-            heartbeat_TXT_showsteps.setText("Counter is not present");
+            stepCounter_TXT_showsteps.setText("Counter is not present");
             isCounter=false;
         }
 
-        heartbeat_BTN_CounterReset.setOnClickListener(new View.OnClickListener() {
+        stepCounter_BTN_CounterReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 spetCount=0;
-                heartbeat_TXT_counter.setText(String.valueOf(spetCount));
-
-
+                stepCounter_TXT_counter.setText(String.valueOf(spetCount));
+            }
+        });
+        stepCouner_BTN_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StepCounterActivity.this, MenuActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
 
 
     private void findView() {
-        heartbeat_TXT_showsteps = findViewById(R.id.heartbeat_TXT_showsteps);
-        heartbeat_TXT_counter = findViewById(R.id.heartbeat_TXT_counter);
-        heartbeat_BTN_CounterReset= findViewById(R.id.heartbeat_BTN_CounterReset);
+        stepCounter_TXT_showsteps = findViewById(R.id.stepCounter_TXT_showsteps);
+        stepCounter_TXT_counter = findViewById(R.id.stepCounter_TXT_counter);
+        stepCounter_BTN_CounterReset= findViewById(R.id.stepCounter_BTN_CounterReset);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        stepCouner_BTN_back = findViewById(R.id.stepCouner_BTN_back);
 
     }
 
@@ -63,7 +72,7 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
     public void onSensorChanged(SensorEvent sensorEvent) {
         if (sensorEvent.sensor == stepSensor){
             spetCount= (int)sensorEvent.values[0];
-            heartbeat_TXT_counter.setText(String.valueOf(spetCount));
+            stepCounter_TXT_counter.setText(String.valueOf(spetCount));
         }
     }
 

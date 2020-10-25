@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/colorAccent"
+        android:background="#FFFFFF"
         >
         <LinearLayout
             android:id="@+id/list_task_LL_time"
@@ -25,21 +25,17 @@
                 android:id="@+id/list_task_LBL_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:textSize="20sp"
-
                 android:text="20/02/20"
                 android:layout_marginEnd="10dp"
-                android:textColor="@color/colorPrimary" />
-
+                android:textColor="@color/button" />
             <TextView
                 android:id="@+id/list_task_LBL_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:text="16:30"
-                android:textColor="@color/colorPrimary" />
-
+                android:textColor="@color/button" />
         </LinearLayout>
 
         <TextView
@@ -49,12 +45,6 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="hfhjslfadf"
-            android:textColor="@color/colorPrimaryDark"
-            />
-
+            android:textColor="@color/button" />
     </LinearLayout>
-
-
-
-
 </androidx.cardview.widget.CardView>

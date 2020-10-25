@@ -4,7 +4,7 @@
     <item
         android:id="@+id/action_list"
         android:enabled="true"
-        android:icon="@drawable/img_todo_list"
+        android:icon="@drawable/img_addto_list"
         android:title="Events"
         app:showAsAction="ifRoom" />
     <item
@@ -19,6 +19,4 @@
         android:icon="@drawable/ic_arrow"
         android:title="@string/back"
         app:showAsAction="ifRoom" />
-
-
 </menu>

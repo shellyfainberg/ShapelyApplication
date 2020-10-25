@@ -42,8 +42,6 @@ public class CalendarActivity extends AppCompatActivity {
 
     public static ArrayList<Event> allTasks;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

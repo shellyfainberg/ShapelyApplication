@@ -145,7 +145,7 @@ public class SigninActivity extends AppCompatActivity implements AdapterView.OnI
                                     .child(UUID.randomUUID().toString())
                                     .setValue(user);
 
-                            Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(SigninActivity.this, LoginActivity.class);
                             startActivity(intent);
                             finish();
 
@@ -173,7 +173,6 @@ public class SigninActivity extends AppCompatActivity implements AdapterView.OnI
         } else {
             return false;
         }
-
     }
 
     private boolean checkEmpties(String name, String age, String height, String weight, String
@@ -224,7 +223,6 @@ public class SigninActivity extends AppCompatActivity implements AdapterView.OnI
             errorText.setText("user type is Required. ");
 
             return true;
-
         }
         return false;
     }
@@ -248,10 +246,7 @@ public class SigninActivity extends AppCompatActivity implements AdapterView.OnI
         singin_CB_female = findViewById(R.id.singin_CB_female);
         singin_BTN_singin = findViewById(R.id.singin_BTN_singin);
         singin_BTN_back = findViewById(R.id.singin_BTN_back);
-
-
     }
-
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

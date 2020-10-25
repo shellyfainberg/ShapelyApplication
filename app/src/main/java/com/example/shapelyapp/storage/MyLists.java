@@ -14,7 +14,6 @@ public class MyLists {
     public static ArrayList<Event> tasksByDateList;
     public static ArrayList<Event> doneTasksList;
 
-
     public MyLists() {
     }
 
@@ -22,7 +21,6 @@ public class MyLists {
         this.dataSnapshot = dataSnapshot;
         taskList = makeTaskList();
         doneTasksList = makeDoneList();
-
     }
 
     private   ArrayList<Event> makeDoneList(){
@@ -33,7 +31,6 @@ public class MyLists {
                 doneTasksList.add(task);
         }
         sortDoneList();
-
         return doneTasksList;
     }
 
@@ -45,7 +42,6 @@ public class MyLists {
                 taskList.add(task);
         }
         sortList();
-
         return taskList;
     }
 
@@ -93,7 +89,6 @@ public class MyLists {
         }
         return tasksByDateList;
     }
-
     public ArrayList<Event> getTaskList(){
         return taskList;
     }

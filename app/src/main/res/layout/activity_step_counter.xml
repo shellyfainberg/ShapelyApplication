@@ -14,7 +14,7 @@
         android:gravity="center"
         >
         <TextView
-            android:id="@+id/heartbeat_TXT_showsteps"
+            android:id="@+id/stepCounter_TXT_showsteps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shows your steps"
@@ -22,44 +22,42 @@
             >
         </TextView>
         <TextView
-            android:id="@+id/heartbeat_TXT_counter"
+            android:id="@+id/stepCounter_TXT_counter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:text="counter"
             android:layout_marginTop="50dp"
-            android:layout_centerInParent="true"
-            >
+            android:layout_centerInParent="true">
         </TextView>
-
-
-
-
         <ImageView
             android:layout_marginTop="30dp"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="@drawable/ic_stpercounter"
-            >
-
+            android:background="@drawable/ic_stpercounter">
         </ImageView>
 
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/heartbeat_BTN_CounterReset"
+            android:id="@+id/stepCounter_BTN_CounterReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Counter reset "
-            android:textColor="@color/colorAccent"
+            android:text="@string/counter_reset"
+            android:textColor="@color/textcolor"
             app:cornerRadius="20dp"
             android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            >
-
+            android:layout_gravity="center">
         </com.google.android.material.button.MaterialButton>
 
-
-
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stepCouner_BTN_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textColor="@color/textcolor"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+        </com.google.android.material.button.MaterialButton>
 
     </LinearLayout>
 

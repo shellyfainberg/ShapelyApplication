@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_backround"
     tools:context=".LoginActivity">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,11 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
             android:text="@string/log_In"
-            android:textSize="40sp"
-            android:shadowColor="@color/colorAccent"
-            android:textColor="@color/colorAccent"
+            android:textSize="50sp"
+            android:shadowColor="@color/textcolor"
+            android:textColor="@color/textcolor"
             android:shadowRadius="10"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
 
             >
         </TextView>
@@ -34,63 +36,53 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:digits=".@qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890"
             android:drawableLeft="@drawable/ic_username"
             android:drawablePadding="8dp"
             android:hint="@string/email"
-            android:inputType="text"
-            />
-
-
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/login_EDT_password"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:hint="password"
-            android:inputType="textPassword"
+            android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/login_TXT_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:shadowColor="@color/textcolor"
+            android:textColor="@color/textcolor">
+        </TextView>
 
-            />
-
-
-
-
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/login_BTN_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/singin_CB_female"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/ic_clear"
             android:text="@string/log_In"
-            android:textColor="@color/colorAccent"
-            app:cornerRadius="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="0dp">
-
-        </com.google.android.material.button.MaterialButton>
-
-
-
-        <com.google.android.material.button.MaterialButton
+            android:textColor="@color/textcolor"
+            android:textSize="30sp">
+        </Button>
+        <Button
             android:id="@+id/login_BTN_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/singin_CB_female"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/ic_clear"
             android:text="@string/back"
-            android:textColor="@color/colorAccent"
-            app:cornerRadius="20dp"
-            android:layout_marginTop="220dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="150dp">
-
-        </com.google.android.material.button.MaterialButton>
-
-
-
-
-
-
-
+            android:textColor="@color/textcolor"
+            android:textSize="20sp">
+        </Button>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

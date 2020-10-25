@@ -36,14 +36,10 @@ public class AlonePracticeActivity extends AppCompatActivity {
         timer(30, practic_TXT_seconds);
         Toast.makeText(AlonePracticeActivity.this, "finish", Toast.LENGTH_SHORT).show();
 
-
-
-
-
         alonpractic_BTM_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AlonePracticeActivity.this, HomeActivity.class);
+                Intent intent = new Intent(AlonePracticeActivity.this, MenuActivity.class);
                 startActivity(intent);
                 finish();
 
@@ -55,13 +51,8 @@ public class AlonePracticeActivity extends AppCompatActivity {
                 Intent intent = new Intent(AlonePracticeActivity.this, PracticeInstructionsActivity.class);
                 startActivity(intent);
                 finish();
-
             }
         });
-
-
-
-
     }
 
     private void findView() {

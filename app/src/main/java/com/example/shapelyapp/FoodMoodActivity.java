@@ -1,6 +1,6 @@
 package com.example.shapelyapp;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +30,7 @@ import java.util.UUID;
 public class FoodMoodActivity extends AppCompatActivity {
 
     private FloatingActionButton foodmood_FABTN_addRecipe;
+    private FloatingActionButton foodmood_FABTN_back;
     private AlertDialog dialog;
     private DatabaseReference mDatabase;
 
@@ -44,7 +45,7 @@ public class FoodMoodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foodmood);
         initDatabase();
-        initViews();
+        findView();
         configRecyclerView();
         currUser = getParsedUser();
         configFloatingButton();
@@ -55,7 +56,14 @@ public class FoodMoodActivity extends AppCompatActivity {
                 createNewDialog();
             }
         });
-
+        foodmood_FABTN_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FoodMoodActivity.this,MenuActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         recipeRecipeAdapter.setOnItemClickEvent(new RecipeAdapter.OnItemClickEvent() {
             @Override
             public void onItemClick(int position) {
@@ -78,9 +86,10 @@ public class FoodMoodActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
-    private void initViews() {
+    private void findView() {
         recyclerView = findViewById(R.id.foodmood_RV_recycler_view);
         foodmood_FABTN_addRecipe = findViewById(R.id.foodmood_FABTN_addRecipe);
+        foodmood_FABTN_back=findViewById(R.id.foodmood_FABTN_back);
     }
 
     private void configRecyclerView() {
@@ -102,6 +111,7 @@ public class FoodMoodActivity extends AppCompatActivity {
         final EditText recipeIngr = contactPopupView.findViewById(R.id.recipePopup_EDT_ingredients);
         final EditText recipeDesc = contactPopupView.findViewById(R.id.recipePopup_EDT_description);
         Button recipePopup_BTN_ok = contactPopupView.findViewById(R.id.recipePopup_BTN_ok);
+        Button recipePopup_BTN_cancel=contactPopupView.findViewById(R.id.recipePopup_BTN_cancel);
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
@@ -119,6 +129,12 @@ public class FoodMoodActivity extends AppCompatActivity {
             }
         });
 
+        recipePopup_BTN_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
     }
 
     private boolean validData(String recipeName, String recipeIngr, String recipeDesc) {
@@ -141,10 +157,8 @@ public class FoodMoodActivity extends AppCompatActivity {
                 }
                 recipeRecipeAdapter.notifyDataSetChanged();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
     }

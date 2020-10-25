@@ -49,22 +49,12 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
-        main_BTN_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,MenuActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
     }
 
     private void findView() {
         main_BTN_signIn = findViewById(R.id.main_BTN_signIn);
         main_BTN_logIn = findViewById(R.id.main_BTN_logIn);
         main_BTN_aboutUs = findViewById(R.id.main_BTN_aboutUs);
-        main_BTN_menu = findViewById(R.id.main_BTN_menu);
     }
 
     @Override

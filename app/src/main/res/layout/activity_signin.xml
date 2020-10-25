@@ -18,14 +18,13 @@
             android:id="@id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:shadowColor="@color/colorAccent"
+            android:layout_marginTop="90dp"
+            android:shadowColor="@color/textcolor"
             android:shadowRadius="10"
             android:text="@string/sign_in"
-            android:textColor="@color/colorAccent"
-            android:textSize="40sp"
-            >
-
+            android:textColor="@color/textcolor"
+            android:textSize="50sp"
+            android:layout_marginBottom="30dp">
         </TextView>
 
 
@@ -34,7 +33,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890"
             android:drawableLeft="@drawable/ic_username"
             android:drawablePadding="8dp"
@@ -44,13 +43,24 @@
             >
 
         </EditText>
+        <EditText
+            android:id="@+id/singin_EDT_email"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/textcolor"
+            android:digits=".@qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890@"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+
+            ></EditText>
 
         <EditText
             android:id="@+id/singin_EDT_age"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:hint="@string/age"
             android:inputType="number"
             android:digits="1234567890">
@@ -62,11 +72,10 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:digits="1234567890"
             android:hint="@string/height"
             >
-
         </EditText>
 
         <EditText
@@ -74,83 +83,58 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:digits="1234567890"
             android:hint="@string/weight">
 
         </EditText>
 
         <EditText
-            android:id="@+id/singin_EDT_email"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
-            android:digits=".@qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890@"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-
-            ></EditText>
-
-
-        <EditText
-
             android:id="@+id/signin_EDT_password"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/textcolor"
             android:hint="password"
-            android:inputType="textPassword"
-
-            />
+            android:inputType="textPassword" />
 
         <Spinner
             android:id="@+id/singin_SNR_Usertype"
             android:layout_width="200dp"
             android:layout_height="25dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/colorAccent"
-          >
-
+            android:background="@color/textcolor">
         </Spinner>
 
         <CheckBox
             android:id="@+id/singin_CB_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/male"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/textcolor"
+            android:layout_marginRight="60dp"
             android:textSize="20sp">
-
         </CheckBox>
-
-
         <CheckBox
             android:id="@+id/singin_CB_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/female"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/textcolor"
+            android:layout_marginRight="50dp"
             android:textSize="20sp">
-
         </CheckBox>
 
         <Button
             android:id="@+id/singin_BTN_singin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_below="@id/singin_CB_female"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/ic_clear"
             android:text="@string/sign_in"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp">
-
+            android:textColor="@color/textcolor"
+            android:textSize="30sp">
         </Button>
 
         <Button
@@ -160,14 +144,9 @@
             android:layout_below="@id/singin_CB_female"
             android:background="@drawable/ic_clear"
             android:text="back"
-            android:textColor="@color/colorAccent"
-            android:textSize="15sp"
-
-            >
-
+            android:textColor="@color/textcolor"
+            android:textSize="20sp">
         </Button>
 
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

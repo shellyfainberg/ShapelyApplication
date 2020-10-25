@@ -18,16 +18,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class EventListFragment extends Fragment {
 
     static CallBackActivity callBack_activityList;
-
     private View view;
     FloatingActionButton floatingActionButton;
     static RecyclerView recyclerView;
     public static Context context;
     private MyList myList;
     private String android_id;
-
-
-
     public EventListFragment(){
 
     }
@@ -57,8 +53,6 @@ public class EventListFragment extends Fragment {
         }
 
         findViews(view);
-
-
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,15 +61,12 @@ public class EventListFragment extends Fragment {
         });
 
         myList = new MyList(recyclerView, context, new EventListFragment());
-
         return view;
     }
 
     public static void updateList(){
-
         new MyList(recyclerView, context, new EventListFragment());
     }
-
 
     private void goTo() {
         callBack_activityList.goToTaskPage();
@@ -85,8 +76,6 @@ public class EventListFragment extends Fragment {
     private void findViews(View view) {
         floatingActionButton = view.findViewById(R.id.list_FABTN_addTask);
         recyclerView = view.findViewById(R.id.list_RV_tasks);
-
-
     }
 
     @Override

@@ -12,99 +12,82 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingTop="30dp"
+        android:paddingTop="10dp"
         >
-
         <TableLayout
-            android:layout_width="373dp"
-            android:layout_height="371dp"
-            android:padding="5dp">
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             <TableRow
-                android:layout_height="185dp"
-                android:gravity="center"
-                android:padding="10dp">
-
+                android:layout_height="wrap_content"
+                android:gravity="center">
                 <LinearLayout
-                    android:layout_marginRight="20dp"
-
+                    android:layout_marginRight="2dp"
                     android:orientation="vertical">
-
                     <ImageButton
                         android:id="@+id/menu_IMBTN_calender"
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/ic_calendar"
-                         />
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/ic_calendar" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/Calendar"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15dp" />
+                        android:textStyle="italic"
+                        android:textColor="@color/textcolor"
+                        android:textSize="30dp" />
                 </LinearLayout>
-
-                <LinearLayout android:orientation="vertical"
-
-                    >
-
+                <LinearLayout
+                    android:orientation="vertical">
                     <ImageButton
                         android:id="@+id/menu_IMBTN_workout"
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/ic_workout"
-                         />
-
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/ic_workout" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/WorkOut"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15dp" />
+                        android:textStyle="italic"
+                        android:textColor="@color/textcolor"
+                        android:textSize="30dp" />
                 </LinearLayout>
             </TableRow>
 
-
             <TableRow
-                android:layout_height="185dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:gravity="center"
-                android:padding="10dp">
+                android:gravity="center">
 
                 <LinearLayout
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="2dp"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/menu_IMBTN_foodmood"
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/ic_dietmenu"
-                         />
-
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/ic_dietmenu"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/FoodMood"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15dp" />
+                        android:textStyle="italic"
+                        android:textColor="@color/textcolor"
+                        android:textSize="30dp" />
                 </LinearLayout>
 
-
-                <LinearLayout android:orientation="vertical"
-
-                    >
+                <LinearLayout
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/menu_IMBTN_bpm"
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
+                        android:id="@+id/menu_IMBTN_stepCounter"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:background="@drawable/ic_step"
-                        android:textColor="#CC3636"
                         android:textSize="20dp" />
 
                     <TextView
@@ -112,45 +95,24 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/Step_Counter"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15dp" />
+                        android:textStyle="italic"
+                        android:textColor="@color/textcolor"
+                        android:textSize="30dp" />
                 </LinearLayout>
-
             </TableRow>
-
         </TableLayout>
-
-
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/menu_BTN_logOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/singin_CB_female"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_clear"
             android:text="log out"
-            android:textColor="@color/colorAccent"
-            app:cornerRadius="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-           >
-
-        </com.google.android.material.button.MaterialButton>
-
-
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/menu_BTN_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/back"
-            android:textColor="@color/colorAccent"
-            app:cornerRadius="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="center"
-            >
-
-        </com.google.android.material.button.MaterialButton>
-
-
+            android:textColor="@color/textcolor"
+            android:textSize="30sp">
+        </Button>
     </LinearLayout>
 
 

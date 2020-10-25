@@ -19,12 +19,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:text="@string/prePractice"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/textcolor"
             android:textSize="30sp"
             >
 
         </TextView>
-
 
 
         <com.google.android.material.button.MaterialButton
@@ -33,9 +32,9 @@
             android:layout_height="wrap_content"
             android:text="@string/lets_start"
             app:cornerRadius="20dp"
+            android:textColor="@color/textcolor"
             android:layout_marginTop="200dp"
             android:layout_gravity="center">
-
         </com.google.android.material.button.MaterialButton>
 
 

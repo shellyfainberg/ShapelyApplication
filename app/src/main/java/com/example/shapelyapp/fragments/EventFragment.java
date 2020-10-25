@@ -42,30 +42,22 @@ public class EventFragment extends Fragment {
     private CallBackActivity callBack_activityList;
 
     private View view;
-    private EditText task_EDT_task, task_EDT_date, task_EDT_time, task_EDT_location;
+    private EditText task_EDT_task, task_EDT_date, task_EDT_time;
     private Context context;
     private String android_id;
-    private Toolbar toolbar;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef;
     int PLACE_PICKER_REQUEST = 1;
     private Button btn_check;
-    private double latitude, longitude;
     private String dateForDatabase = "";
-    private int mdistance = 0;
-
-
 
     public EventFragment(){
-
     }
 
     public EventFragment(Context context, String android_id, Toolbar toolbar) {
         this.context = context;
         this.android_id = android_id;
-        this.toolbar = toolbar;
     }
-
 
     public void setCallBack(CallBackActivity _callBack_activityList) {
         this.callBack_activityList = _callBack_activityList;
@@ -75,7 +67,6 @@ public class EventFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("pttt", "onCreate");
-
     }
 
     @Override
@@ -98,19 +89,6 @@ public class EventFragment extends Fragment {
             }
         });
 
-        task_EDT_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-                try{
-                    startActivityForResult(builder.build(getActivity()),
-                            PLACE_PICKER_REQUEST);
-
-                } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
         myRef = database.getReference("message");
 
         btn_check.setOnClickListener(new View.OnClickListener() {
@@ -118,28 +96,19 @@ public class EventFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(context, "saved", Toast.LENGTH_SHORT).show();
                 String description = task_EDT_task.getText().toString();
-                //String date = task_EDT_date.getText().toString();
+                String date = task_EDT_date.getText().toString();
                 String time = task_EDT_time.getText().toString();
-                ArrayList<Double> location = new ArrayList<>();
                 String id = String.valueOf(System.currentTimeMillis());
-                location.add(latitude);
-                location.add(longitude);
-                boolean isnotify = false;
-                boolean isDone = false;
 
-                Event task = new Event(description, dateForDatabase, time, location, id, isnotify, isDone, mdistance);
+                Event task = new Event(description, dateForDatabase, time,id);
                 myRef.child("Users").child(android_id).child(""+ id).setValue(task);
 
                 task_EDT_task.setText("");
                 task_EDT_date.setText("");
                 task_EDT_time.setText("");
-                task_EDT_location.setText("");
-
                 callBack_activityList.setCheckToolbar();
             }
         });
-
-
 
         task_EDT_date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,8 +122,6 @@ public class EventFragment extends Fragment {
                 showTimeDialog();
             }
         });
-
-
         return view;
     }
 
@@ -178,7 +145,6 @@ public class EventFragment extends Fragment {
                 Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
         );
         datePickerDialog.show();
-
     }
 
     TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
@@ -222,34 +188,10 @@ public class EventFragment extends Fragment {
         }
     };
 
-
     private void findViews(View view) {
         task_EDT_task = view.findViewById(R.id.task_EDT_task);
         task_EDT_date = view.findViewById(R.id.task_EDT_date);
         task_EDT_time = view.findViewById(R.id.task_EDT_time);
-        task_EDT_location = view.findViewById(R.id.task_EDT_location);
         btn_check = view.findViewById(R.id.task_BTN_check);
-
-    }
-
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == PLACE_PICKER_REQUEST){
-            if(resultCode == RESULT_OK){
-                Place place = PlacePicker.getPlace(data, context);
-                StringBuilder stringBuilder = new StringBuilder();
-                latitude = place.getLatLng().latitude;
-                longitude = place.getLatLng().longitude;
-                String mlatitude = String.valueOf(latitude);
-                String mlongitude = String.valueOf(longitude);
-                stringBuilder.append("LATITUDE: ");
-                stringBuilder.append(mlatitude);
-                stringBuilder.append("\n");
-                stringBuilder.append("LONGITUDE: ");
-                stringBuilder.append(mlongitude);
-                task_EDT_location.setText(stringBuilder.toString());
-            }
-        }
     }
 }

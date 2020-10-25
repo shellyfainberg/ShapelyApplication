@@ -15,8 +15,7 @@ public class MenuActivity extends AppCompatActivity {
     private ImageButton menu_IMBTN_calender;
     private ImageButton menu_IMBTN_workout;
     private ImageButton menu_IMBTN_foodmood;
-    private ImageButton menu_IMBTN_bpm;
-    private Button menu_BTN_back;
+    private ImageButton menu_IMBTN_stepCounter;
     private Button menu_BTN_logOut;
     private MySp mySp;
     private User currUser;
@@ -25,11 +24,9 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         mySp = new MySp(this);
         currUser = (User)getIntent().getSerializableExtra(getString(R.string.user_id));
         findView();
-
         menu_IMBTN_calender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +36,6 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-
         menu_IMBTN_workout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +44,6 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
-
 
         menu_IMBTN_foodmood.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +55,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-
-        menu_IMBTN_bpm.setOnClickListener(new View.OnClickListener() {
+        menu_IMBTN_stepCounter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MenuActivity.this, StepCounterActivity.class);
@@ -69,33 +63,18 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-        menu_BTN_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
         menu_BTN_logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 logOut();
             }
         });
-
-
     }
 
     private void logOut() {
         mySp.deleteString(MySp.KEYS.CURRENT_USER);
         openWelcome();
         finish();
-
-
     }
 
     private void openWelcome() {
@@ -106,15 +85,10 @@ public class MenuActivity extends AppCompatActivity {
 
 
     private void findView() {
-
         menu_IMBTN_calender = findViewById(R.id.menu_IMBTN_calender);
         menu_IMBTN_workout = findViewById(R.id.menu_IMBTN_workout);
         menu_IMBTN_foodmood = findViewById(R.id.menu_IMBTN_foodmood);
-        menu_IMBTN_bpm = findViewById(R.id.menu_IMBTN_bpm);
-        menu_BTN_back = findViewById(R.id.menu_BTN_back);
+        menu_IMBTN_stepCounter= findViewById(R.id.menu_IMBTN_stepCounter);
         menu_BTN_logOut = findViewById(R.id.menu_BTN_logOut);
-
-
-
     }
 }

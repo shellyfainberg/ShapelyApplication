@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,9 +28,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
-
-
     private EditText login_EDT_email;
+    private TextView login_TXT_error;
     private EditText login_EDT_password;
     private Button login_BTN_login;
     private  Button login_BTN_back;
@@ -63,7 +63,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void findView() {
-
         login_EDT_email = findViewById(R.id.login_EDT_email);
         login_EDT_password = findViewById(R.id.login_EDT_password);
         login_BTN_login = findViewById(R.id.login_BTN_login);
@@ -74,15 +73,14 @@ public class LoginActivity extends AppCompatActivity {
         databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
                     if (dataSnapshot.getValue(User.class).getEmail().equals(userEmail)) {
                         currUser = dataSnapshot.getValue(User.class);
                         Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                         intent.putExtra(getString(R.string.user_id), currUser);
                         startActivity(intent);
                         finish();
+                    }else{
                     }
                 }
             }
@@ -103,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         if (checkErrors(email, password)) {
             Log.i("TAG", "LogIn: Error has occurred");
             return;
+        }else{
         }
 
 
@@ -172,6 +171,5 @@ public class LoginActivity extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
         return super.onTouchEvent(event);
-
     }
 }

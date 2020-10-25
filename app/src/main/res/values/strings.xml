@@ -5,10 +5,11 @@
     <string name="about_us">about us</string>
     <string name="back">Back</string>
 
-    <string name="aboutUsText">Hello!
-        We are Noy Elbaz and Shelly Fainberg a software student of the 3rd year in the Afeka College.
+    <string name="Hello">Hello!</string>
+    <string name="aboutUsText">We are Noy Elbaz and Shelly Fainberg a software student of the 3rd year in the Afeka College.
         We have developed the application to share our passion to the sports and a healthy lifestyle
-        We hope you will use it and enjoy as we do :) </string>
+        We hope you will use it and enjoy as we do :)</string>
+
     <string name="trainee">trainee</string>
     <string name="coach">coach</string>
     <string name="user_name">user name</string>
@@ -25,6 +26,8 @@
     <string name="FoodMood"> FoodMood</string>
     <string name="WorkOut"> WorkOut</string>
     <string name="Step_Counter"> Step Counter</string>
+
+    <string name="exist_account">  Do you already have an account?</string>
 
 
 
@@ -70,6 +73,11 @@ Have fun and good luck!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_id">user</string>
     <string name="dietitian">dietitian</string>
+    <string name="Label">Label</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="virtual_training">Virtual training</string>
+    <string name="exercises">Exercises</string>
+    <string name="counter_reset">Counter reset</string>
 
 
 </resources>

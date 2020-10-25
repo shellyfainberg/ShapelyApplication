@@ -12,13 +12,13 @@
         android:background="@drawable/ic_backround"
         android:layout_margin="10dp">
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Task"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
+            android:text="@string/Label"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:textColor="@color/textcolor"
             android:layout_marginBottom="5dp"/>
 
         <EditText
@@ -28,14 +28,15 @@
             android:hint="Enter your task here"
             android:layout_marginBottom="10dp"
             android:inputType="text"
+            android:textColor="@color/textcolor"
             android:imeOptions="actionDone"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Date"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textColor="@color/textcolor"
             android:layout_marginBottom="5dp"/>
 
         <EditText
@@ -43,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Choose date"
+            android:textColor="@color/textcolor"
             android:layout_marginBottom="10dp"
             android:focusable="false"
             />
@@ -51,8 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Time"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textColor="@color/textcolor"
             android:layout_marginBottom="5dp"/>
 
         <EditText
@@ -60,40 +62,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Choose time"
+            android:textColor="@color/textcolor"
             android:layout_marginBottom="10dp"
             android:focusable="false"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Location"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginBottom="5dp"/>
-
-        <EditText
-            android:id="@+id/task_EDT_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Choose Location"
-            android:layout_marginBottom="10dp"
-            android:focusable="false"/>
-
     </LinearLayout>
-
-
 
     <Button
         android:id="@+id/task_BTN_check"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:text="@string/Save"
-        android:backgroundTint="@color/colorAccent"
-        android:textSize="20sp"
+        android:text="@string/add_alarm"
+        android:backgroundTint="@color/textcolor"
+        android:textSize="30sp"
         android:textStyle="italic"
-        android:textColor="@color/colorPrimary"/>
-
-
-
+        android:textColor="@color/button"/>
 </RelativeLayout>
