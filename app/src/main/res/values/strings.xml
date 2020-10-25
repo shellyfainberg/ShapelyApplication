@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Shapely</string>
+    <string name="log_In">Log in</string>
+    <string name="sign_in">Sign in</string>
+    <string name="about_us">about us</string>
+    <string name="back">Back</string>
+
+    <string name="aboutUsText">Hello!
+        We are Noy Elbaz and Shelly Fainberg a software student of the 3rd year in the Afeka College.
+        We have developed the application to share our passion to the sports and a healthy lifestyle
+        We hope you will use it and enjoy as we do :) </string>
+    <string name="trainee">trainee</string>
+    <string name="coach">coach</string>
+    <string name="user_name">user name</string>
+    <string name="password">password</string>
+    <string name="remmberme">remmber me</string>
+    <string name="email">email</string>
+    <string name="weight">weight</string>
+    <string name="height">height</string>
+    <string name="country">country</string>
+    <string name="age">age</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="Calendar"> Calendar</string>
+    <string name="FoodMood"> FoodMood</string>
+    <string name="WorkOut"> WorkOut</string>
+    <string name="Step_Counter"> Step Counter</string>
+
+
+
+
+    <string name="trainer">Look for a personal trainer</string>
+    <string name="Practice">Practice alone</string>
+    <string name="lets_start"> lets start</string>
+
+
+    <string name="prePractice"> The workout is made up of twelve 30 seconds spurts which are broken up with 10 second rest periods .
+Have fun and good luck!</string>
+
+    <string name="Jumping_jacks"> Jumping jacks</string>
+    <string name="Wall_sit"> Wall sit</string>
+    <string name="Push_up"> Push up</string>
+    <string name="Abdominal_crunch"> Abdominal crunch</string>
+    <string name="Step_up_on_to_chair"> Step up on to chair</string>
+    <string name="Squat"> Squat</string>
+    <string name="Triceps_dip_on_chair"> Triceps dip on chair</string>
+    <string name="High_knees_running_to_place"> High knees running to place</string>
+    <string name="Lunge"> Lunge</string>
+    <string name="Push_up_and_routation"> Push up and routation</string>
+    <string name="Side_plank">Side Plank</string>
+
+    <string name="Task">Task</string>
+    <string name="Date">Date</string>
+    <string name="Time">Time</string>
+    <string name="Location">Location</string>
+    <string name="Save">Save</string>
+
+
+
+
+    <string-array name="users_arrays">
+        <item>user type</item>
+        <item>trainne</item>
+        <item>coach</item>
+        <item>dietitian</item>
+
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_id">user</string>
+    <string name="dietitian">dietitian</string>
+
+
+</resources>

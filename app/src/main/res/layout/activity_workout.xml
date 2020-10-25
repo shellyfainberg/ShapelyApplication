@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_backround"
+    tools:context=".WorkoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+
+            <TableRow
+                android:layout_height="185dp"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/workout_mIMBTN_practiceAlon"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/ic_listofpractic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="practice alone"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical">
+
+                    <ImageButton
+                       android:id="@+id/workout_IMBTN_exercise"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/ic_virtualpractic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="show exercsize"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/workout_BTN_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="180dp"
+            android:text="@string/back"
+            android:textColor="@color/colorAccent"
+            app:cornerRadius="20dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

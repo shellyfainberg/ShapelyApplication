@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SigninActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_backround"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:shadowColor="@color/colorAccent"
+            android:shadowRadius="10"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp"
+            >
+
+        </TextView>
+
+
+        <EditText
+            android:id="@+id/singin_EDT_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890"
+            android:drawableLeft="@drawable/ic_username"
+            android:drawablePadding="8dp"
+            android:hint="@string/user_name"
+            android:inputType="text"
+
+            >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/singin_EDT_age"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/age"
+            android:inputType="number"
+            android:digits="1234567890">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/singin_EDT_height"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:digits="1234567890"
+            android:hint="@string/height"
+            >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/singin_EDT_weight"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:digits="1234567890"
+            android:hint="@string/weight">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/singin_EDT_email"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:digits=".@qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890@"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+
+            ></EditText>
+
+
+        <EditText
+
+            android:id="@+id/signin_EDT_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:hint="password"
+            android:inputType="textPassword"
+
+            />
+
+        <Spinner
+            android:id="@+id/singin_SNR_Usertype"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+          >
+
+        </Spinner>
+
+        <CheckBox
+            android:id="@+id/singin_CB_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/male"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp">
+
+        </CheckBox>
+
+
+        <CheckBox
+            android:id="@+id/singin_CB_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/female"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp">
+
+        </CheckBox>
+
+        <Button
+            android:id="@+id/singin_BTN_singin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/singin_CB_female"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_clear"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/singin_BTN_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/singin_CB_female"
+            android:background="@drawable/ic_clear"
+            android:text="back"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+
+            >
+
+        </Button>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

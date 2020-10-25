@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_backround"
+    tools:context=".MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        >
+
+        <TableLayout
+            android:layout_width="373dp"
+            android:layout_height="371dp"
+            android:padding="5dp">
+
+            <TableRow
+                android:layout_height="185dp"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/menu_IMBTN_calender"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/ic_calendar"
+                         />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Calendar"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/menu_IMBTN_workout"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/ic_workout"
+                         />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/WorkOut"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="185dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/menu_IMBTN_foodmood"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/ic_dietmenu"
+                         />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/FoodMood"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+                <LinearLayout android:orientation="vertical"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/menu_IMBTN_bpm"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/ic_step"
+                        android:textColor="#CC3636"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Step_Counter"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="log out"
+            android:textColor="@color/colorAccent"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+           >
+
+        </com.google.android.material.button.MaterialButton>
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_BTN_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textColor="@color/colorAccent"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

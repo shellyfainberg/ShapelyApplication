@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_backround"
+    tools:context=".HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_logo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/main_BTN_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_clear"
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="5"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/main_BTN_logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_clear"
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="5"
+        android:text="@string/log_In"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_BTN_signIn" />
+
+    <Button
+        android:id="@+id/main_BTN_aboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_clear"
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="5"
+        android:text="@string/about_us"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_BTN_logIn" />
+
+    <Button
+        android:id="@+id/main_BTN_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_BTN_aboutUs"
+        android:background="@drawable/ic_clear"
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="5"
+        android:text="menu"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_BTN_aboutUs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

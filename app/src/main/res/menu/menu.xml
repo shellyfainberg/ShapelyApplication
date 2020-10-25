@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_list"
+        android:enabled="true"
+        android:icon="@drawable/img_todo_list"
+        android:title="Events"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_calendar"
+        android:enabled="true"
+        android:icon="@drawable/img_calendar"
+        android:title="Calendar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_back"
+        android:enabled="true"
+        android:icon="@drawable/ic_arrow"
+        android:title="@string/back"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

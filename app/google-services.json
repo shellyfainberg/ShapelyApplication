@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "268472252344",
+    "firebase_url": "https://my-shapelyapp.firebaseio.com",
+    "project_id": "my-shapelyapp",
+    "storage_bucket": "my-shapelyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268472252344:android:63fd97081504fbd514014d",
+        "android_client_info": {
+          "package_name": "com.example.shapelyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268472252344-7frcu0bnjmvd4rphukp4c6p41j917j91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm3QcUlwDgqBa-jMLm8SWvunpacBMwacg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268472252344-7frcu0bnjmvd4rphukp4c6p41j917j91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

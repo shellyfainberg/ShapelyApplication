@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_backround"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+
+        >
+        <TextView
+            android:id="@+id/login_TXT_loginTitel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:text="@string/log_In"
+            android:textSize="40sp"
+            android:shadowColor="@color/colorAccent"
+            android:textColor="@color/colorAccent"
+            android:shadowRadius="10"
+            android:layout_marginBottom="20dp"
+
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/login_EDT_email"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:digits=".@qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890"
+            android:drawableLeft="@drawable/ic_username"
+            android:drawablePadding="8dp"
+            android:hint="@string/email"
+            android:inputType="text"
+            />
+
+
+
+        <EditText
+            android:id="@+id/login_EDT_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:hint="password"
+            android:inputType="textPassword"
+
+            />
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_BTN_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_In"
+            android:textColor="@color/colorAccent"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_BTN_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textColor="@color/colorAccent"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="220dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
