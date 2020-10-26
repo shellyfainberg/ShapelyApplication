@@ -44,6 +44,7 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
         stepCounter_BTN_CounterReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stepSensor=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
                 spetCount=0;
                 stepCounter_TXT_counter.setText(String.valueOf(spetCount));
             }

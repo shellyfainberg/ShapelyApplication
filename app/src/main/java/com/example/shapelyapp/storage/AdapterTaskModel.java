@@ -52,11 +52,9 @@ public class AdapterTaskModel extends RecyclerView.Adapter<RecyclerView.ViewHold
             }else{
                 newDate = "";
             }
-
             genericViewHolder.list_task_LBL_date.setText(newDate);
             genericViewHolder.list_task_LBL_time.setText(task.getTime());
             genericViewHolder.list_task_LBL_description.setText(task.getDescription());
-
         }
     }
 
@@ -79,13 +77,6 @@ public class AdapterTaskModel extends RecyclerView.Adapter<RecyclerView.ViewHold
             this.list_task_LBL_time = itemView.findViewById(R.id.list_task_LBL_time);
             this.list_task_LBL_description = itemView.findViewById(R.id.list_task_LBL_description);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mItemClickListener.onItemClick(itemView, getAdapterPosition(), getItem(getAdapterPosition()));
-
-                }
-            });
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

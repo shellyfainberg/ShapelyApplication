@@ -9,42 +9,54 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shapelyapp.model.Execrs;
+import com.example.shapelyapp.storage.ExAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class ShowPracticeActivity extends AppCompatActivity {
 
-    private ListView show_LV_recipesList;
+    private RecyclerView recyclerView;
+    private ArrayList<Execrs> exList;
+    private ExAdapter exAdapter;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
+
     private FloatingActionButton showPractic_FABTN_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showpractice);
+        exList = new ArrayList<>();
+        recyclerView = findViewById(R.id.showPractic_RCV);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
 
+        exAdapter = new ExAdapter(exList);
+        recyclerView.setAdapter(exAdapter);
         findView();
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Jumping jacks ");
-        arrayList.add("Wall sit");
-        arrayList.add("Push up");
-        arrayList.add("Abdominal crunch");
-        arrayList.add(" Step up on to chair");
-        arrayList.add("Squat");
-        arrayList.add("Triceps dip on chair");
-        arrayList.add("High knees running to place");
-        arrayList.add("Lunge");
-        arrayList.add("Push up and routation");
-        arrayList.add("Side Plank ");
+        exList.add(new Execrs(R.drawable.ic_ex1,"Jumping jacks ","fdklajfkldsa"));
+        exList.add(new Execrs(R.drawable.ic_ex1,"Jumping jacks ","fdklajfkldsa"));
+        exList.add(new Execrs(R.drawable.ic_ex1,"Jumping jacks ","fdklajfkldsa"));
+        exList.add(new Execrs(R.drawable.ic_ex1,"Jumping jacks ","fdklajfkldsa"));
+        exAdapter.notifyDataSetChanged();
+//        arrayList.add("Wall sit");
+//        arrayList.add("Push up");
+//        arrayList.add("Abdominal crunch");
+//        arrayList.add(" Step up on to chair");
+//        arrayList.add("Squat");
+//        arrayList.add("Triceps dip on chair");
+//        arrayList.add("High knees running to place");
+//        arrayList.add("Lunge");
+//        arrayList.add("Push up and routation");
+//        arrayList.add("Side Plank ");
 
-
-
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
-        show_LV_recipesList.setAdapter(arrayAdapter);
 
         showPractic_FABTN_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +80,6 @@ public class ShowPracticeActivity extends AppCompatActivity {
 
 
     private void findView() {
-        show_LV_recipesList = findViewById(R.id.show_LV_recipesList);
         showPractic_FABTN_back = findViewById(R.id.showPractic_FABTN_back);
     }
 

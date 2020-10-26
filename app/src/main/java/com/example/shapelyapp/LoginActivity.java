@@ -27,6 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class LoginActivity extends AppCompatActivity {
     private EditText login_EDT_email;
     private TextView login_TXT_error;
@@ -102,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.i("TAG", "LogIn: Error has occurred");
             return;
         }else{
+
         }
 
 
@@ -111,6 +114,10 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     readCurrentUserFromDB(email);
                 } else {
+                    new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Oops...")
+                            .setContentText("Something went wrong!")
+                            .show();
                 }
             }
         });
